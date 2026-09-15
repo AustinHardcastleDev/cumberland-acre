@@ -28,7 +28,6 @@ html {
 body {
   background: var(--color-paper);
   color: var(--color-ink);
-  font-family: var(--font-work-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -43,20 +42,37 @@ body {
   }
 
   h1,
-  h2 {
+  h2,
+  h3,
+  .wordmark,
+  .faq-summary {
     font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+    font-optical-sizing: auto;
+  }
+
+  h1,
+  h2 {
     font-weight: 400;
   }
 
-  h3 {
-    font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+  h1 {
+    font-variation-settings: "opsz" 60;
+  }
+
+  h2 {
+    font-variation-settings: "opsz" 36;
+  }
+
+  h3,
+  .faq-summary {
     font-weight: 600;
+    font-variation-settings: "opsz" 18;
   }
 }
 
 .wordmark {
-  font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
   font-weight: 700;
+  font-variation-settings: "opsz" 14;
 }
 
 summary {

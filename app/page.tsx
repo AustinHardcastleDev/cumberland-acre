@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { OfferForm } from "@/components/offer-form";
+import { sourceSerif } from "@/lib/fonts";
 import { SITE } from "@/lib/site";
 
 const pad = "px-[clamp(18px,5vw,48px)]";
@@ -48,13 +49,6 @@ const comparison = [
 export default function Home() {
   return (
     <>
-      <a
-        href="#offer"
-        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3 focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
-      >
-        Skip to the offer form
-      </a>
-
       <header className={`border-b-2 border-ink ${pad}`}>
         <div className="flex items-center py-4">
           <Link
@@ -69,7 +63,7 @@ export default function Home() {
               className="block size-11 flex-none"
               priority
             />
-            <span className="wordmark text-[22px] tracking-[0.02em] text-black">
+            <span className={`${sourceSerif.className} wordmark text-[22px] tracking-[0.02em] text-black`}>
               Cumberland Acre
             </span>
           </Link>
@@ -81,7 +75,7 @@ export default function Home() {
           className={`mx-auto grid max-w-[1240px] items-center gap-[clamp(28px,4vw,60px)] pt-[clamp(40px,6vw,76px)] pb-[clamp(36px,5vw,56px)] ${pad} lg:grid-cols-2`}
         >
           <div>
-            <h1 className="mb-[26px] font-serif text-[clamp(36px,5.4vw,60px)] font-normal leading-[1.1] tracking-[-0.015em] text-pretty">
+            <h1 className={`${sourceSerif.className} mb-[26px] text-[clamp(36px,5.4vw,60px)] font-normal leading-[1.1] tracking-[-0.015em] text-pretty`}>
               We buy land and houses in Middle Tennessee, exactly as they are,
               and we pay cash for them.
             </h1>
@@ -137,7 +131,7 @@ export default function Home() {
               ["Local", "Owners who live here"],
             ].map(([title, copy]) => (
               <div key={title} className="text-[15.5px] leading-[1.45]">
-                <strong className="mb-0.5 block font-serif text-[17px] font-semibold">
+                <strong className={`${sourceSerif.className} mb-0.5 block text-[17px] font-semibold`}>
                   {title}
                 </strong>
                 <span className="text-muted">{copy}</span>
@@ -147,7 +141,7 @@ export default function Home() {
         </section>
 
         <section className={`mx-auto max-w-[880px] py-[clamp(44px,6vw,72px)] ${pad}`}>
-          <h2 className="mb-2 font-serif text-[clamp(27px,3.4vw,38px)] font-normal tracking-[-0.015em]">
+          <h2 className={`${sourceSerif.className} mb-2 text-[clamp(27px,3.4vw,38px)] font-normal tracking-[-0.015em]`}>
             How it works
           </h2>
           <div className="mt-[30px] grid gap-[30px] sm:grid-cols-3">
@@ -172,7 +166,7 @@ export default function Home() {
                 <div className="mb-2 text-xs tracking-[0.18em] text-moss uppercase">
                   {step}
                 </div>
-                <h3 className="mb-2 font-serif text-xl font-semibold">{title}</h3>
+                <h3 className={`${sourceSerif.className} mb-2 text-xl font-semibold`}>{title}</h3>
                 <p className="m-0 text-base leading-[1.65] text-copy">{copy}</p>
               </div>
             ))}
@@ -190,7 +184,7 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-            <p className="mt-3.5 max-w-[40em] font-serif text-[clamp(17px,1.6vw,19px)] leading-[1.6] text-copy">
+            <p className={`${sourceSerif.className} mt-3.5 max-w-[40em] text-[clamp(17px,1.6vw,19px)] leading-[1.6] text-copy`}>
               We&apos;re the ones doing the work afterward: new roof, new porch,
               whatever the place needs. That&apos;s why we can take it on in
               whatever condition you&apos;re leaving it.
@@ -210,7 +204,7 @@ export default function Home() {
           className={`mx-auto grid max-w-[880px] gap-[clamp(30px,4vw,56px)] py-[clamp(44px,6vw,72px)] md:grid-cols-2 ${pad}`}
         >
           <div>
-            <h2 className="mb-5 font-serif text-[clamp(25px,3vw,33px)] font-normal tracking-[-0.015em]">
+            <h2 className={`${sourceSerif.className} mb-5 text-[clamp(25px,3vw,33px)] font-normal tracking-[-0.015em]`}>
               What we buy
             </h2>
             <ul className="m-0 list-none p-0">
@@ -235,7 +229,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h2 className="mb-5 font-serif text-[clamp(25px,3vw,33px)] font-normal tracking-[-0.015em]">
+            <h2 className={`${sourceSerif.className} mb-5 text-[clamp(25px,3vw,33px)] font-normal tracking-[-0.015em]`}>
               Selling to us vs. listing
             </h2>
             <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
@@ -262,7 +256,7 @@ export default function Home() {
 
         <section className="border-t border-rule bg-sage">
           <div className={`mx-auto max-w-[880px] py-[clamp(44px,6vw,72px)] ${pad}`}>
-            <h2 className="mb-[26px] font-serif text-[clamp(25px,3vw,34px)] font-normal tracking-[-0.015em]">
+            <h2 className={`${sourceSerif.className} mb-[26px] text-[clamp(25px,3vw,34px)] font-normal tracking-[-0.015em]`}>
               Questions we get most often
             </h2>
             {faqs.map((faq, index) => (
@@ -272,7 +266,7 @@ export default function Home() {
                   index === faqs.length - 1 ? "border-b" : ""
                 }`}
               >
-                <summary className="faq-summary font-serif text-[19px] font-semibold">
+                <summary className={`${sourceSerif.className} faq-summary text-[19px] font-semibold`}>
                   {faq.q}
                 </summary>
                 <p className="mt-[11px] text-[16.5px] leading-[1.7] text-copy">
@@ -295,7 +289,7 @@ export default function Home() {
                 height={34}
                 className="block size-[34px] flex-none"
               />
-              <span className="wordmark text-[19px]">
+              <span className={`${sourceSerif.className} wordmark text-[19px]`}>
                 Cumberland Acre
               </span>
             </div>

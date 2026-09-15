@@ -1,21 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Source_Serif_4, Work_Sans } from "next/font/google";
+import { sourceSerif, workSans } from "@/lib/fonts";
 import { SITE } from "@/lib/site";
 import "./globals.css";
-
-const sourceSerif = Source_Serif_4({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-source-serif",
-  weight: ["400", "600", "700"],
-});
-
-const workSans = Work_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-work-sans",
-  weight: ["400", "500", "600"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -82,7 +68,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${sourceSerif.variable} ${workSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-paper font-sans text-ink">
+      <body className={`${workSans.className} min-h-full bg-paper text-ink`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

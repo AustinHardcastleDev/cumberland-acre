@@ -2,12 +2,13 @@
 
 import { useActionState, useState } from "react";
 import { submitOffer, type OfferState } from "@/app/actions/submit-offer";
+import { sourceSerif } from "@/lib/fonts";
 import { PROPERTY_TYPES, SITE, SOURCES, TIMELINES } from "@/lib/site";
 
 const initialState: OfferState = { ok: false };
 
 const fieldClass =
-  "w-full bg-transparent px-0.5 py-2 font-serif text-[19px] text-ink outline-none";
+  `${sourceSerif.className} w-full bg-transparent px-0.5 py-2 text-[19px] text-ink outline-none`;
 const labelClass =
   "grid gap-1.5 border-b border-rule-strong pb-1 focus-within:border-moss";
 const legendClass =
@@ -27,7 +28,7 @@ function OfferFormInner({ onReset }: { onReset: () => void }) {
   if (state.ok) {
     return (
       <div>
-        <h2 className="m-0 mb-3.5 font-serif text-[clamp(28px,3.6vw,40px)] font-normal tracking-tight">
+        <h2 className={`${sourceSerif.className} m-0 mb-3.5 text-[clamp(28px,3.6vw,40px)] font-normal tracking-tight`}>
           Received. Thank you.
         </h2>
         <p className="mb-6 text-[17px] leading-[1.7] text-copy">
@@ -51,7 +52,7 @@ function OfferFormInner({ onReset }: { onReset: () => void }) {
 
   return (
     <div>
-      <h2 className="m-0 mb-2.5 font-serif text-[clamp(28px,3.6vw,42px)] font-normal tracking-[-0.015em]">
+      <h2 className={`${sourceSerif.className} m-0 mb-2.5 text-[clamp(28px,3.6vw,42px)] font-normal tracking-[-0.015em]`}>
         Tell us about your property
       </h2>
       <p className="mb-8 text-[16.5px] leading-[1.6] text-[#4E5A46]">

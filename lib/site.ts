@@ -3,6 +3,7 @@ export const SITE = {
   phoneDisplay: "615-212-5101",
   phoneHref: "tel:6152125101",
   email: "hello@cumberlandacre.com",
+  from: "Cumberland Acre <cumberland-acre@notifications.hometeamtechnology.com>",
   url: "https://cumberlandacre.com",
   region: "Middle Tennessee",
 } as const;

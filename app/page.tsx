@@ -55,9 +55,12 @@ export default function Home() {
         Skip to the offer form
       </a>
 
-      <header className={`border-b-2 border-ink py-4 ${pad}`}>
-        <div className="flex flex-wrap items-baseline justify-between gap-3">
-          <Link href="/" className="flex items-center gap-[11px] text-ink no-underline">
+      <header className={`border-b-2 border-ink ${pad}`}>
+        <div className="flex items-center py-4">
+          <Link
+            href="/"
+            className="flex items-center gap-[11px] text-black no-underline hover:text-black"
+          >
             <Image
               src="/logo-mark.png"
               alt=""
@@ -66,16 +69,10 @@ export default function Home() {
               className="block size-11 flex-none"
               priority
             />
-            <span className="font-serif text-[22px] font-bold tracking-[0.02em]">
+            <span className="wordmark text-[22px] tracking-[0.02em] text-black">
               Cumberland Acre
             </span>
           </Link>
-          <a
-            href={SITE.phoneHref}
-            className="text-[15.5px] font-semibold text-ink no-underline hover:text-moss"
-          >
-            {SITE.phoneDisplay}
-          </a>
         </div>
       </header>
 
@@ -103,7 +100,7 @@ export default function Home() {
             <div className="flex flex-wrap items-center gap-3.5">
               <a
                 href="#offer"
-                className="inline-flex min-h-12 items-center bg-ink px-6 py-3.5 text-base font-semibold text-paper no-underline hover:bg-moss hover:text-paper"
+                className="inline-flex min-h-12 items-center bg-ink px-6 py-3.5 text-base font-semibold text-white no-underline hover:bg-moss hover:text-white"
               >
                 Request a free offer
               </a>
@@ -140,7 +137,7 @@ export default function Home() {
               ["Local", "Owners who live here"],
             ].map(([title, copy]) => (
               <div key={title} className="text-[15.5px] leading-[1.45]">
-                <strong className="mb-0.5 block font-serif text-[17px] font-normal">
+                <strong className="mb-0.5 block font-serif text-[17px] font-semibold">
                   {title}
                 </strong>
                 <span className="text-muted">{copy}</span>
@@ -275,7 +272,7 @@ export default function Home() {
                   index === faqs.length - 1 ? "border-b" : ""
                 }`}
               >
-                <summary className="faq-summary font-serif text-[19px]">
+                <summary className="faq-summary font-serif text-[19px] font-semibold">
                   {faq.q}
                 </summary>
                 <p className="mt-[11px] text-[16.5px] leading-[1.7] text-copy">
@@ -298,7 +295,7 @@ export default function Home() {
                 height={34}
                 className="block size-[34px] flex-none"
               />
-              <span className="font-serif text-[19px] font-bold">
+              <span className="wordmark text-[19px]">
                 Cumberland Acre
               </span>
             </div>

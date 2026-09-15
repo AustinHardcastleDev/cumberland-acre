@@ -11,6 +11,4 @@ cp .env.example .env.local
 npm run dev
 ```
 
-The offer form sends email through Resend to `hello@cumberlandacre.com`. Keep `RESEND_API_KEY` in Vercel environment variables — never commit it.
-
-The sending domain (`cumberlandacre.com`) needs to be verified in Resend for production mail to go out.
+The offer form sends email through Resend to `hello@cumberlandacre.com` from `cumberland-acre@notifications.hometeamtechnology.com`. Keep `RESEND_API_KEY` in Vercel environment variables — never commit it.

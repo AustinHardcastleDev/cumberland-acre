@@ -32,13 +32,31 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: var(--color-moss);
-  text-underline-offset: 3px;
+@layer base {
+  a {
+    color: var(--color-moss);
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    color: var(--color-moss-dark);
+  }
+
+  h1,
+  h2 {
+    font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+  }
 }
 
-a:hover {
-  color: var(--color-moss-dark);
+.wordmark {
+  font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+  font-weight: 700;
 }
 
 summary {
@@ -61,8 +79,9 @@ summary::-webkit-details-marker {
   color: var(--color-moss);
   content: "+";
   flex: none;
-  font-family: var(--font-source-serif), Georgia, serif;
+  font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
   font-size: 22px;
+  font-weight: 600;
   line-height: 1;
 }
 

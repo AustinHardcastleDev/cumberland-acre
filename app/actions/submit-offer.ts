@@ -95,8 +95,7 @@ export async function submitOffer(
     };
   }
 
-  const from =
-    process.env.RESEND_FROM ?? `${SITE.name} <${SITE.email}>`;
+  const from = process.env.RESEND_FROM ?? SITE.from;
   const to = process.env.CONTACT_EMAIL ?? SITE.email;
   const resend = new Resend(apiKey);
 

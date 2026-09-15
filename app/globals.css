@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-paper: #f8f8f3;
+  --color-ink: #17251c;
+  --color-copy: #35422f;
+  --color-muted: #6b7563;
+  --color-rule: #dce1d3;
+  --color-rule-strong: #cbd3c0;
+  --color-moss: #2a6247;
+  --color-moss-dark: #1d4a34;
+  --color-sage: #ecf0e7;
+  --color-label: #7c876f;
+  --font-sans: var(--font-work-sans);
+  --font-serif: var(--font-source-serif);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-work-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-moss);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--color-moss-dark);
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-summary {
+  display: flex;
+  cursor: pointer;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.faq-summary::after {
+  color: var(--color-moss);
+  content: "+";
+  flex: none;
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-size: 22px;
+  line-height: 1;
+}
+
+details[open] > .faq-summary::after {
+  content: "–";
+}

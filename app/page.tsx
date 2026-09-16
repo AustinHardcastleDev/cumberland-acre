@@ -76,7 +76,7 @@ export default function Home() {
         >
           <div>
             <h1 className={`${sourceSerif.className} mb-[26px] text-[clamp(36px,5.4vw,60px)] font-normal leading-[1.1] tracking-[-0.015em] text-pretty`}>
-              We buy land and houses in Middle Tennessee exactly as they are
+              We buy land and houses in Middle Tennessee exactly as they are,
               and pay with cash.
             </h1>
             <p className="mb-[18px] max-w-[34em] text-[clamp(17px,1.6vw,19px)] leading-[1.7] text-copy text-pretty">
